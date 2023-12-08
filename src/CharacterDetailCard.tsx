@@ -20,7 +20,7 @@ export default function CharacterDetailCard(props:CharacterDetailCardProps){
             <h3>{foundCharacter?.status}</h3>
             <h3>{foundCharacter?.species}</h3>
             <h3>{foundCharacter?.type}</h3>
-            {foundCharacter?.comments.map((comment)=> <h4>{comment}</h4>)}
+            {foundCharacter?.comments?.map((comment)=> <h4>{comment}</h4>)}
         </>
     )
 }
