@@ -20,7 +20,7 @@ function App() {
     const [page, setPage] = useState<number>(1)
 
     useEffect(
-        () => fetchAllChars
+        () => fetchAllChars()
         ,[page]
     )
 
@@ -35,7 +35,7 @@ function App() {
     }
 
     function fetchAllChars(){
-        axios.get("https://rickandmortyapi.com/api/character/?page=${page}")
+        axios.get("https://rickandmortyapi.com/api/character/?page="+page)
             .then((response) => setCharacters(response.data.results))
             .catch((error) => alert(error.message))
     }

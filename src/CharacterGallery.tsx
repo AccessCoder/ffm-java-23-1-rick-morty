@@ -15,7 +15,7 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
                 Gallery
             </p>
             <h3>Change Site</h3>
-            <button onClick={() => props.decr}> Prev </button> <br/> <button onClick={() => props.incr}> Next </button>
+            <button onClick={props.decr}> Prev </button> <br/> <button onClick={props.incr}> Next </button>
             {props.characters.map(character => <CharacterCard
                                                                 key={character.id}
                                                                 character={character}/>)}
